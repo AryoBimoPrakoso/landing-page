@@ -1,0 +1,186 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+}
+
+
+.navbar-container {
+    width: 50%;
+    height: 70px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    margin-top: 2rem;
+}
+.nav-list {
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.logo img {
+    width: 150px;
+}
+
+.nav-list ul {
+    display: flex;
+    padding-left: 0;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+.nav-list li {
+    list-style-type: none;
+    margin: 0.5rem;
+}
+
+.nav-list a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list a:hover {
+    color: black;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1500px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+main .content .content-description {
+    flex: 1 1;
+    margin: 2rem;
+}
+
+main .content .content-description .title {
+    margin-block: 1rem;
+    font-size: 3.5rem;
+  }
+main .content .content-description p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+main .content .content-description button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: black;
+    color: white;
+    margin-block-start: 1rem;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+main .content .content-description button:hover {
+  border: 3px solid black;
+  background-color: transparent;
+  color: black;
+}
+main .content .content-image {
+    display: flex;
+    flex: 1 ;
+}
+main .content .content-image img {
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+  }
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+    
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+  } 
+
+main aside .sosial-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    
+}
+
+main aside .sosial-media li {
+    list-style-type: none;
+    
+}
+
+li a i {
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .navbar-container {
+        flex-direction: column;
+    }
+    .navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+    main {
+        padding: 1rem 3rem;
+    }
+    main .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .content-description .title {
+        font-size: 3rem;
+    }
+    .content-description p {
+        font-size: 1rem;
+    }
+    .content .content-image {
+        order: -1;
+    }
+    
+}
+
